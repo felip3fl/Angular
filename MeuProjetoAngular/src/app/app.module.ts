@@ -13,6 +13,8 @@ import { rootRouterConfig } from './app.routes';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
+import { ProdutoService } from './produtos/produtos.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,10 +30,12 @@ import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.co
   imports: [
     BrowserModule,
     [RouterModule.forRoot(rootRouterConfig, {useHash:false})],
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
-    {provide: APP_BASE_HREF, useValue: "/"}
+    {provide: APP_BASE_HREF, useValue: "/"},
+    ProdutoService
   ],
   bootstrap: [AppComponent]
 })
