@@ -16,6 +16,10 @@ import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.co
 import { ProdutoService } from './produtos/produtos.service';
 import { HttpClientModule } from '@angular/common/http';
 
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt'
+registerLocaleData(localePt);
+
 @NgModule({
   declarations: [
     AppComponent,

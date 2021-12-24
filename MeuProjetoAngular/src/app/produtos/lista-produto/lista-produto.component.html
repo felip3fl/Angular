@@ -18,13 +18,13 @@
 
                 <div *ngIf="produto.promocao" class="card-body">
                     <div><h4 class="card-text">De:
-                        <small><del>{{ produto.valor }}</del></small>
-                        Por: {{ produto.valorPromo  }}
+                        <small><del>{{ produto.valor | currency:'BRL':'symbol':'1.2-2':'pt'}}</del></small>
+                        Por: {{ produto.valorPromo  | currency:'BRL':'symbol':'1.2-2':'pt'}}
                     </h4></div>
                 </div>
 
                 <div *ngIf="!produto.promocao" class="card-body">
-                    <div><h4>{{ produto.valor }}</h4></div>
+                    <div><h4>{{ produto.valor | currency:'BRL':'symbol':'1.2-2':'pt'}}</h4></div>
                 </div>
 
                 <div class="card-footer">
