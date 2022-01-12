@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastro',
@@ -10,7 +10,7 @@ export class CadastroComponent implements OnInit {
 
   cadastroForm123: FormGroup;
 
-  constructor() { }
+  constructor(private fb14: FormBuilder) { }
 
   ngOnInit() {
     //Aqui é para validar o controle individualmente, diferente do FormGroup
@@ -18,12 +18,13 @@ export class CadastroComponent implements OnInit {
 
     //Aqui é para validação em grupo
     //Posso tratar varios itens desse formulario, como se fosse o mesmo formulario
-    this.cadastroForm123 = new FormGroup({
-      nome12: new FormControl(''),
-      cpf12: new FormControl(''),
-      email12: new FormControl(''),
-      senha12: new FormControl(''),
-      senhaConfirmacao12: new FormControl(''),
+    //é recomendado usar FormBuilder para código mais 'limpo'
+    this.cadastroForm123 = this.fb14.group({
+      nome12: [''],
+      cpf12: [''],
+      email12: [''],
+      senha12: [''],
+      senhaConfirmacao12: [''],
     });
 
   }
