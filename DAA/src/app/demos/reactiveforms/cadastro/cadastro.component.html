@@ -54,7 +54,8 @@
 
         <div class="form-group">
             <div class="col-md-4 col-md-offset-2">
-                <span><button class="btn btn-success" id="Registrar" type="submit">Registrar</button></span>
+                <span><button class="btn btn-success" id="Registrar" 
+                    [disabled]="!cadastroForm123.valid" type="submit">Registrar</button></span>
             </div>
         </div>
 
@@ -64,6 +65,7 @@
                     <p>Formulario valido: {{ cadastroForm123.valid }}</p>
                     <p>Formulario Tocado: {{ cadastroForm123.touched }}</p>
                     <p>Formulario Sujo: {{ cadastroForm123.dirty }}</p><br>
+                    <p>Formulario: {{ formResult321 }}</p><br>
                 </div>
             </div>
         </div>
