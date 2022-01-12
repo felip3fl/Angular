@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from './models/usuario';
 
 @Component({
@@ -18,11 +18,12 @@ export class CadastroComponent implements OnInit {
     //Aqui é para validar o controle individualmente, diferente do FormGroup
     //let nome = new FormControl('');
 
+    //https://angular.io/guide/form-validation
     //Aqui é para validação em grupo
     //Posso tratar varios itens desse formulario, como se fosse o mesmo formulario
     //é recomendado usar FormBuilder para código mais 'limpo'
     this.cadastroForm123 = this.fb14.group({
-      nome12: [''],
+      nome12: ['', Validators.required],
       cpf12: [''],
       email12: [''],
       senha12: [''],
