@@ -34,7 +34,25 @@
             <label class="col-md-2 control-label">E-mail</label>
             <div class="col-md-10">
                 <input class="form-control" id="email" type="text" placeholder="E-mail (requerido)" formControlName="email12" />
-  
+
+                <!-- aqui o ? significa que se for nulo, ignora -->
+                <!-- [ngClass] aqui é para aplicar a classe CSS, neste caso o is-invalid -->
+                <span class="text-danger" *ngIf="cadastroForm123.get('email12')?.errors?.required 
+                && (cadastroForm123.get('email12').dirty || cadastroForm123.get('email12').touched)" 
+                [ngClass]="{'is-invalid':cadastroForm123.get('email12')?.errors?.required 
+                && (cadastroForm123.get('email12').dirty || cadastroForm123.get('email12').touched)}">
+                    <p>Preencha o campo email</p>
+                </span>
+
+                <!-- aqui o ? significa que se for nulo, ignora -->
+                <!-- [ngClass] aqui é para aplicar a classe CSS, neste caso o is-invalid -->
+                <span class="text-danger" *ngIf="cadastroForm123.get('email12')?.errors?.email 
+                && (cadastroForm123.get('email12').dirty || cadastroForm123.get('email12').touched)" 
+                [ngClass]="{'is-invalid':cadastroForm123.get('email12')?.errors?.email 
+                && (cadastroForm123.get('email12').dirty || cadastroForm123.get('email12').touched)}">
+                    <p>E-mail em formato invalido</p>
+                </span>
+
             </div>
         </div>
 
