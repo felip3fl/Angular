@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgBrazilValidators } from 'ng-brazil';
 import { Usuario } from './models/usuario';
 import { utilsBr } from 'js-brasil';
@@ -20,6 +20,11 @@ export class CadastroComponent implements OnInit {
   constructor(private fb14: FormBuilder) { }
 
   ngOnInit() {
+    let senha = new FormControl('',[Validators.required, CustomValidators.rangeLength([6,15])]);
+    let senhaConfirmacao = new FormControl('',[Validators.required, 
+      CustomValidators.rangeLength([6,15]), 
+      CustomValidators.equalTo(senha)]);
+
     //Aqui é para validar o controle individualmente, diferente do FormGroup
     //let nome = new FormControl('');
 
@@ -28,11 +33,11 @@ export class CadastroComponent implements OnInit {
     //Posso tratar varios itens desse formulario, como se fosse o mesmo formulario
     //é recomendado usar FormBuilder para código mais 'limpo'
     this.cadastroForm123 = this.fb14.group({
-      nome12: ['', Validators.required],
+      nome12: ['', [Validators.required, Validators.minLength(2),Validators.maxLength(150)]],
       cpf12: ['',[Validators.required, NgBrazilValidators.cpf]],
       email12: ['', [Validators.required, Validators.email]],
-      senha12: ['', [CustomValidators.rangeLength([6,15])]],
-      senhaConfirmacao12: [''],
+      senha12: senha,
+      senhaConfirmacao12: senhaConfirmacao,
     });
 
   }
