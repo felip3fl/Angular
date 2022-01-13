@@ -12,6 +12,11 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { rootRouterConfig } from './app.routes';
 import { CadastroComponent } from './demos/reactiveforms/cadastro/cadastro.component';
 
+import { NgBrazil } from 'ng-brazil' ;
+import { TextMask } from 'ng-brazil';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +30,8 @@ import { CadastroComponent } from './demos/reactiveforms/cadastro/cadastro.compo
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    NgBrazil,
+    TextMask.TextMaskModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false})]
   ],
   providers: [

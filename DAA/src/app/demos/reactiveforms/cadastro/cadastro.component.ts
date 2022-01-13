@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgBrazilValidators } from 'ng-brazil';
 import { Usuario } from './models/usuario';
+import { utilsBr } from 'js-brasil';
 
 @Component({
   selector: 'app-cadastro',
@@ -12,6 +14,7 @@ export class CadastroComponent implements OnInit {
   cadastroForm123: FormGroup;
   usuario: Usuario;
   formResult321: string = '';
+  MASKS = utilsBr.MASKS;
 
   constructor(private fb14: FormBuilder) { }
 
@@ -25,7 +28,7 @@ export class CadastroComponent implements OnInit {
     //é recomendado usar FormBuilder para código mais 'limpo'
     this.cadastroForm123 = this.fb14.group({
       nome12: ['', Validators.required],
-      cpf12: [''],
+      cpf12: ['',[Validators.required, NgBrazilValidators.cpf]],
       email12: ['', [Validators.required, Validators.email]],
       senha12: [''],
       senhaConfirmacao12: [''],

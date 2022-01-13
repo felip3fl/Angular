@@ -25,8 +25,12 @@
         <div class="form-group">
             <label class="col-md-2 control-label">CPF</label>
             <div class="col-md-10">
-                <input class="form-control" id="email" type="text" placeholder="CPF (requerido)"  formControlName="cpf12"/>
-  
+                <input class="form-control" id="email" type="text" placeholder="CPF (requerido)" formControlName="cpf12" cpf [textMask]="{mask: MASKS.cpf.textMask}" />
+                <span class="text-danger" *ngIf="cadastroForm123.get('cpf12')?.errors?.cpf 
+                && (cadastroForm123.get('cpf12').dirty || cadastroForm123.get('cpf12').touched)" [ngClass]="{'is-invalid':cadastroForm123.get('cpf12')?.errors?.cpf 
+                && (cadastroForm123.get('cpf12').dirty || cadastroForm123.get('cpf12').touched)}">
+                    <p>CPF Inválido</p>
+                </span>
             </div>
         </div>
 
