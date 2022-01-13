@@ -12,13 +12,17 @@
             <label class="col-md-2 control-label">Nome completo</label>
             <div class="col-md-10">
                 <input class="form-control" id="nome" type="text" placeholder="Nome (requerido)"
-                    formControlName="nome12" />
+                    formControlName="nome12" [ngClass]="{'is-invalid':displayMessage.nome12}" />
 
-                <span class="text-danger" *ngIf="cadastroForm123.get('nome12').errors 
+                <span class="text-danger" *ngIf="displayMessage.nome12">
+                    <p [innerHTML]="displayMessage.nome12"></p>
+                </span>
+
+                <!-- <span class="text-danger" *ngIf="cadastroForm123.get('nome12').errors 
                 && (cadastroForm123.get('nome12').dirty || cadastroForm123.get('nome12').touched)" [ngClass]="{'is-invalid':cadastroForm123.get('nome12').errors 
                 && (cadastroForm123.get('nome12').dirty || cadastroForm123.get('nome12').touched)}">
                     <p>Preencha o campo nome</p>
-                </span>
+                </span> -->
             </div>
         </div>
 
@@ -26,12 +30,17 @@
             <label class="col-md-2 control-label">CPF</label>
             <div class="col-md-10">
                 <input class="form-control" id="email" type="text" placeholder="CPF (requerido)" formControlName="cpf12"
-                    cpf [textMask]="{mask: MASKS.cpf.textMask}" />
-                <span class="text-danger" *ngIf="cadastroForm123.get('cpf12')?.errors?.cpf 
+                    cpf [textMask]="{mask: MASKS.cpf.textMask}" [ngClass]="{'is-invalid':displayMessage.cpf12}"/>
+
+                <span class="text-danger" *ngIf="displayMessage.cpf12">
+                    <p [innerHTML]="displayMessage.cpf12"></p>
+                </span>
+
+                <!-- <span class="text-danger" *ngIf="cadastroForm123.get('cpf12')?.errors?.cpf 
                 && (cadastroForm123.get('cpf12').dirty || cadastroForm123.get('cpf12').touched)" [ngClass]="{'is-invalid':cadastroForm123.get('cpf12')?.errors?.cpf 
                 && (cadastroForm123.get('cpf12').dirty || cadastroForm123.get('cpf12').touched)}">
                     <p>CPF Inválido</p>
-                </span>
+                </span> -->
             </div>
         </div>
 
@@ -39,23 +48,27 @@
             <label class="col-md-2 control-label">E-mail</label>
             <div class="col-md-10">
                 <input class="form-control" id="email" type="text" placeholder="E-mail (requerido)"
-                    formControlName="email12" />
+                    formControlName="email12" [ngClass]="{'is-invalid':displayMessage.email12}"/>
+
+                <span class="text-danger" *ngIf="displayMessage.email12">
+                    <p [innerHTML]="displayMessage.email12"></p>
+                </span>
 
                 <!-- aqui o ? significa que se for nulo, ignora -->
                 <!-- [ngClass] aqui é para aplicar a classe CSS, neste caso o is-invalid -->
-                <span class="text-danger" *ngIf="cadastroForm123.get('email12')?.errors?.required 
+                <!-- <span class="text-danger" *ngIf="cadastroForm123.get('email12')?.errors?.required 
                 && (cadastroForm123.get('email12').dirty || cadastroForm123.get('email12').touched)" [ngClass]="{'is-invalid':cadastroForm123.get('email12')?.errors?.required 
                 && (cadastroForm123.get('email12').dirty || cadastroForm123.get('email12').touched)}">
                     <p>Preencha o campo email</p>
-                </span>
+                </span> -->
 
                 <!-- aqui o ? significa que se for nulo, ignora -->
                 <!-- [ngClass] aqui é para aplicar a classe CSS, neste caso o is-invalid -->
-                <span class="text-danger" *ngIf="cadastroForm123.get('email12')?.errors?.email 
+                <!-- <span class="text-danger" *ngIf="cadastroForm123.get('email12')?.errors?.email 
                 && (cadastroForm123.get('email12').dirty || cadastroForm123.get('email12').touched)" [ngClass]="{'is-invalid':cadastroForm123.get('email12')?.errors?.email 
                 && (cadastroForm123.get('email12').dirty || cadastroForm123.get('email12').touched)}">
                     <p>E-mail em formato invalido</p>
-                </span>
+                </span> -->
 
             </div>
         </div>
@@ -64,12 +77,17 @@
             <label class="col-md-2 control-label">Senha</label>
             <div class="col-md-10">
                 <input class="form-control" id="password" type="password" placeholder="Senha (requerido)"
-                    formControlName="senha12" />
-                <span class="text-danger" *ngIf="cadastroForm123.get('senha12')?.errors?.rangeLength 
+                    formControlName="senha12" [ngClass]="{'is-invalid':displayMessage.senha12}"/>
+
+                <span class="text-danger" *ngIf="displayMessage.senha12">
+                    <p [innerHTML]="displayMessage.senha12"></p>
+                </span>
+
+                <!-- <span class="text-danger" *ngIf="cadastroForm123.get('senha12')?.errors?.rangeLength 
                 && (cadastroForm123.get('senha12').dirty || cadastroForm123.get('senha12').touched)" [ngClass]="{'is-invalid':cadastroForm123.get('senha12')?.errors?.rangeLength 
                 && (cadastroForm123.get('senha12').dirty || cadastroForm123.get('senha12').touched)}">
                     <p>E-mail em formato invalido</p>
-                </span>
+                </span> -->
             </div>
         </div>
 
@@ -77,7 +95,12 @@
             <label class="col-md-2 control-label">Confirme a Senha</label>
             <div class="col-md-10">
                 <input class="form-control" id="confirmPassword" type="password"
-                    placeholder="Confirme a Senha (requerido)" formControlName="senhaConfirmacao12" />
+                    placeholder="Confirme a Senha (requerido)" formControlName="senhaConfirmacao12" 
+                    [ngClass]="{'is-invalid':displayMessage.senhaConfirmacao12}"/>
+
+                <span class="text-danger" *ngIf="displayMessage.senhaConfirmacao12">
+                    <p [innerHTML]="displayMessage.senhaConfirmacao12"></p>
+                </span>
             </div>
         </div>
 
