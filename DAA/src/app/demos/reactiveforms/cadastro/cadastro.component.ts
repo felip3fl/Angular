@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgBrazilValidators } from 'ng-brazil';
 import { Usuario } from './models/usuario';
 import { utilsBr } from 'js-brasil';
+import { CustomValidators } from 'ng2-validation';
 
 @Component({
   selector: 'app-cadastro',
@@ -30,7 +31,7 @@ export class CadastroComponent implements OnInit {
       nome12: ['', Validators.required],
       cpf12: ['',[Validators.required, NgBrazilValidators.cpf]],
       email12: ['', [Validators.required, Validators.email]],
-      senha12: [''],
+      senha12: ['', [CustomValidators.rangeLength([6,15])]],
       senhaConfirmacao12: [''],
     });
 

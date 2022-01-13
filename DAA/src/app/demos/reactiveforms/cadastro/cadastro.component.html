@@ -65,6 +65,11 @@
             <div class="col-md-10">
                 <input class="form-control" id="password" type="password" placeholder="Senha (requerido)"
                     formControlName="senha12" />
+                <span class="text-danger" *ngIf="cadastroForm123.get('senha12')?.errors?.rangeLength 
+                && (cadastroForm123.get('senha12').dirty || cadastroForm123.get('senha12').touched)" [ngClass]="{'is-invalid':cadastroForm123.get('senha12')?.errors?.rangeLength 
+                && (cadastroForm123.get('senha12').dirty || cadastroForm123.get('senha12').touched)}">
+                    <p>E-mail em formato invalido</p>
+                </span>
             </div>
         </div>
 
