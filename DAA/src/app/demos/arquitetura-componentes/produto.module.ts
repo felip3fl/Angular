@@ -1,7 +1,9 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { CommonModule, registerLocaleData } from "@angular/common";
 import { ProdutoDashboardComponent } from "./produto-dashboard/produto-dashboard.component";
 import { ProdutoRoutingModule } from "./produto.route";
+registerLocaleData(localePt);
+import localePt from '@angular/common/locales/pt';
 
 @NgModule({
     declarations:[
