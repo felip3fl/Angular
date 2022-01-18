@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="card-footer">
-                    <a class="btn btn-success" href="javascript:void(0)">
+                    <a [ngClass]="produto.ativo ? 'btn btn-success' : 'btn btn-danger'" (click)="emitirEvento()" href="javascript:void(0)">
                         Botão
                     </a>
                 </div>

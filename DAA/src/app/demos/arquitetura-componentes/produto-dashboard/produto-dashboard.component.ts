@@ -57,4 +57,8 @@ export class ProdutoDashboardComponent implements OnInit {
     }];
   }
 
+  mudarStatus(event: Produto){
+    event.ativo = !event.ativo;
+  }
+
 }
