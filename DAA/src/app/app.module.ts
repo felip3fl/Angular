@@ -14,6 +14,7 @@ import { NgBrazil } from 'ng-brazil' ;
 import { TextMask } from 'ng-brazil';
 import { CustomFormsModule } from 'ng2-validation'
 import { NavegacaoModule } from './navegacao/navegacao.module';
+import { ProdutoDashboardComponent } from './demos/arquitetura-componentes/produto-dashboard/produto-dashboard.component';
 
 
 
@@ -21,7 +22,8 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
   declarations: [
     AppComponent,
     SobreComponent,
-    CadastroComponent
+    CadastroComponent,
+    ProdutoDashboardComponent
   ],
   imports: [
     BrowserModule,
