@@ -4,10 +4,12 @@ import { ProdutoDashboardComponent } from "./produto-dashboard/produto-dashboard
 import { ProdutoRoutingModule } from "./produto.route";
 registerLocaleData(localePt);
 import localePt from '@angular/common/locales/pt';
+import { ProdutoDetalheComponent } from "./componentes/produto-card-detalhe.component";
 
 @NgModule({
     declarations:[
-        ProdutoDashboardComponent
+        ProdutoDashboardComponent,
+        ProdutoDetalheComponent
     ],
     imports:[
         //CommonModule é para ser tratado como um modulo
