@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
+import { ProdutoCountComponent } from '../componentes/produto-count.components';
 import { Produto } from '../models/produto';
 
 @Component({
@@ -11,11 +12,14 @@ export class ProdutoDashboardComponent implements OnInit, AfterViewInit {
 
   produtos: Produto[]
 
+  @ViewChild(ProdutoCountComponent, {static: false}) contador: ProdutoCountComponent;
   @ViewChild('teste',{static: false}) mensagemTela: ElementRef;
 
   constructor() { }
 
   ngAfterViewInit(): void {
+    console.log('Objeto do contador: ', this.contador.produtos);
+
     let clickTexto: Observable<any> = fromEvent(this.mensagemTela.nativeElement,'click');
     clickTexto.subscribe(()=>{
       alert('clicou no texto!');
