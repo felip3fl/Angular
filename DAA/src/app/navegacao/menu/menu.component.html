@@ -10,6 +10,7 @@
 
           <!-- [routerLinkActiveOptions]="{exact: true}" é para falar para o Angular que tem que ser a URL exata -->
           <!-- se por exemplo, vc tiver home/sobre, o home não ficará destacado por que não é exato -->
+          <!-- 
           <li class="nav-item">
             <a class="nav-link" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLink]="['/home']">Home</a>
           </li>
@@ -22,7 +23,15 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLink]="['/produtos']">Produtos</a>
+          </li> 
+          -->
+
+          <li class="nav-item" *ngFor="let item of nav">
+            <a class="nav-link" [routerLinkActiveOptions]="{exact: item.exact}" routerLinkActive="active" [routerLink]="item.link">
+              {{item.name}}  
+            </a>
           </li>
+          
         </ul>
       </div>
     </div>
