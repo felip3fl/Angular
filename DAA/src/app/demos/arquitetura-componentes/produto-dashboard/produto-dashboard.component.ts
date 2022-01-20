@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
+import { ProdutoDetalheComponent } from '../componentes/produto-card-detalhe.component';
 import { ProdutoCountComponent } from '../componentes/produto-count.components';
 import { Produto } from '../models/produto';
 
@@ -15,6 +16,8 @@ export class ProdutoDashboardComponent implements OnInit, AfterViewInit {
   @ViewChild(ProdutoCountComponent, {static: false}) contador: ProdutoCountComponent;
   @ViewChild('teste',{static: false}) mensagemTela: ElementRef;
 
+  @ViewChildren(ProdutoDetalheComponent) botoes: QueryList<ProdutoDetalheComponent>
+
   constructor() { }
 
   ngAfterViewInit(): void {
@@ -25,6 +28,11 @@ export class ProdutoDashboardComponent implements OnInit, AfterViewInit {
       alert('clicou no texto!');
       return;
     })
+
+    console.log(this.botoes);
+    this.botoes.forEach(p=>{
+      console.log(p.produto);
+    });
   }
 
   ngOnInit() {

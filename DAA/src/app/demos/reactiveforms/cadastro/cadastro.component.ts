@@ -59,15 +59,16 @@ export class CadastroComponent implements OnInit, AfterViewInit {
    }
 
   ngAfterViewInit(): void {
+    //Outro exemplo de @ViewChildren - @ViewChild decorators=
     //aqui criei uma colegacao de Observable, vai ser disparada para cada item do formulario
     //atraves do evento 'blur'
     let controlBlurs: Observable<any>[] = this.formInputElements
     .map((formControl: ElementRef) => fromEvent(formControl.nativeElement, 'blur'));
 
-  //merge aplica o efeito para a toda colecao
-  merge(...controlBlurs).subscribe(() => {
-    this.displayMessage = this.genericValidator.processarMensagens(this.cadastroForm123);
-  });
+    //merge aplica o efeito para a toda colecao
+    merge(...controlBlurs).subscribe(() => {
+      this.displayMessage = this.genericValidator.processarMensagens(this.cadastroForm123);
+    });
   }
 
   ngOnInit() {
