@@ -8,6 +8,7 @@ import { ProdutoDetalheComponent } from "./componentes/produto-card-detalhe.comp
 import { ProdutoCountComponent } from "./componentes/produto-count.components";
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 import { ProdutoAppComponent } from "./produto.app.component";
+import { ProdutoService } from "./services/produto.service";
 
 @NgModule({
     declarations:[
@@ -21,6 +22,10 @@ import { ProdutoAppComponent } from "./produto.app.component";
         //CommonModule é para ser tratado como um modulo
         CommonModule,
         ProdutoRoutingModule
+    ],
+    providers:[
+        //providers é para que o ProdutoService possa ser injetado por dependência
+        ProdutoService
     ],
     exports: []
 })  
