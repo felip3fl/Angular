@@ -7,9 +7,11 @@ import localePt from '@angular/common/locales/pt';
 import { ProdutoDetalheComponent } from "./componentes/produto-card-detalhe.component";
 import { ProdutoCountComponent } from "./componentes/produto-count.components";
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
+import { ProdutoAppComponent } from "./produto.app.component";
 
 @NgModule({
     declarations:[
+        ProdutoAppComponent,
         ProdutoDashboardComponent,
         ProdutoDetalheComponent,
         ProdutoCountComponent,
