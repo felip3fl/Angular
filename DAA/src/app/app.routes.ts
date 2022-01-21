@@ -21,7 +21,7 @@ export const rootRouterConfig: Routes = [
 @NgModule({
     //modulo de routeamento do nosso modulo principal
     imports:[
-        RouterModule.forRoot(rootRouterConfig)
+        RouterModule.forRoot(rootRouterConfig, {enableTracing:true})
     ],
     //aqui no exports, estou deixando o RouterModule disponivel
     exports:[
