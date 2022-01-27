@@ -16,6 +16,7 @@ import { CustomFormsModule } from 'ng2-validation'
 import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AuthGuard } from './services/app.guard';
 import { CadastroGuard } from './services/cadastro.guard';
+import { FilmesComponent } from './demos/pipes/filmes/filmes.component';
 
 
 
@@ -23,7 +24,8 @@ import { CadastroGuard } from './services/cadastro.guard';
   declarations: [
     AppComponent,
     SobreComponent,
-    CadastroComponent
+    CadastroComponent,
+    FilmesComponent
   ],
   imports: [
     BrowserModule,
