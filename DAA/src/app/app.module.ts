@@ -14,6 +14,7 @@ import { NgBrazil } from 'ng-brazil' ;
 import { TextMask } from 'ng-brazil';
 import { CustomFormsModule } from 'ng2-validation'
 import { NavegacaoModule } from './navegacao/navegacao.module';
+import { AuthGuard } from './services/app.guard';
 
 
 
@@ -34,6 +35,7 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
     AppRoutingModule
   ],
   providers: [
+    AuthGuard,
     {provide: APP_BASE_HREF, useValue: '/'}
   ],
   bootstrap: [AppComponent]

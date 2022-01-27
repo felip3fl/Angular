@@ -4,6 +4,7 @@ import { HomeComponent } from './navegacao/home/home.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { CadastroComponent } from './demos/reactiveforms/cadastro/cadastro.component';
 import { NotFoundComponent } from './navegacao/not-found/not-found.component';
+import { AuthGuard } from './services/app.guard';
 
 export const rootRouterConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -15,7 +16,9 @@ export const rootRouterConfig: Routes = [
         .then(m => m.ProdutoModule)},
     { path: 'admin', 
         loadChildren: () => import('./admin/admin.module')
-        .then(m => m.AdminModule)},
+        .then(m => m.AdminModule),
+        canLoad:[AuthGuard]
+    },
 
     //ATENÇÃO, Esse linha SEMPRE tem que ser a última, se não irá bugar o resto da navegação
     { path: '**', component: NotFoundComponent}
