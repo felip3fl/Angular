@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Filme } from './filmes';
 
+registerLocaleData(localePt);
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
 @Component({
   selector: 'app-filmes',
   templateUrl: './filmes.component.html',

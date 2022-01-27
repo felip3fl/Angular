@@ -15,9 +15,9 @@
         <tbody>
             <tr *ngFor='let filme of filmes'>
                 <img [src]="filme.imagem" style="padding-bottom: 5px;">
-                <td>{{ filme.nome  }}</td>
-                <td>{{ filme.dataLancamento }}</td>
-                <td>{{ filme.valor }}</td>
+                <td>{{ filme.nome | titlecase }}</td>
+                <td>{{ filme.dataLancamento | date: "dd/MM/yyy" }}</td>
+                <td>{{ filme.valor | currency: 'BRL':'symbol':'1.2-2':'pt' }}</td>
                 <td>{{ filme.tamanho }}</td>
             </tr>
         </tbody>
