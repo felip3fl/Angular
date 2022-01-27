@@ -28,6 +28,8 @@ export class CadastroComponent implements OnInit, AfterViewInit {
   genericValidator: GenericValidator;
   displayMessage: DisplayMessage = {};
 
+  mudancasNaoSalvas: boolean;
+
   constructor(private fb14: FormBuilder) {
     this.validationMessages = {
       nome12: {
@@ -68,6 +70,8 @@ export class CadastroComponent implements OnInit, AfterViewInit {
     //merge aplica o efeito para a toda colecao
     merge(...controlBlurs).subscribe(() => {
       this.displayMessage = this.genericValidator.processarMensagens(this.cadastroForm123);
+      
+      this.mudancasNaoSalvas = true;
     });
   }
 
@@ -98,6 +102,8 @@ export class CadastroComponent implements OnInit, AfterViewInit {
     if(this.cadastroForm123.dirty && this.cadastroForm123.valid){
       this.usuario = Object.assign({}, this.usuario, this.cadastroForm123.value);
       this.formResult321 = JSON.stringify(this.cadastroForm123.value);
+
+      this.mudancasNaoSalvas = true;
     }{
       this.formResult321 = "Não submeteu!"
     }
