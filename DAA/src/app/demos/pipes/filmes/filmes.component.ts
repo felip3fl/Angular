@@ -4,14 +4,21 @@ import { Filme } from './filmes';
 registerLocaleData(localePt);
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { ImageFormaterPipe } from './image.pipe';
 
 @Component({
   selector: 'app-filmes',
   templateUrl: './filmes.component.html',
+  providers: [
+    ImageFormaterPipe
+  ]
 })
 export class FilmesComponent implements OnInit {
 
   filmes: Filme[];
+  mapped: Filme[];
+
+  constructor(private imageFormat: ImageFormaterPipe) { }
 
   ngOnInit() {
 
@@ -53,6 +60,15 @@ export class FilmesComponent implements OnInit {
       }
     ];
    
+    this.mapped = this.filmes.map(filme => {
+      return {
+        nome: filme.nome,
+        dataLancamento: filme.dataLancamento,
+        valor: filme.valor,
+        tamanho: filme.tamanho,
+        imagem: this.imageFormat.transform(filme.imagem, 'default', true)
+      }
+    });
 
   }
 }
