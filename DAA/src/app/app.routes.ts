@@ -13,6 +13,9 @@ export const rootRouterConfig: Routes = [
     { path: 'produtos', 
         loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
         .then(m => m.ProdutoModule)},
+    { path: 'admin', 
+        loadChildren: () => import('./admin/admin.module')
+        .then(m => m.AdminModule)},
 
     //ATENÇÃO, Esse linha SEMPRE tem que ser a última, se não irá bugar o resto da navegação
     { path: '**', component: NotFoundComponent}
