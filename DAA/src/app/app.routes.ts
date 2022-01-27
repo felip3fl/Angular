@@ -9,7 +9,7 @@ import { AuthGuard } from './services/app.guard';
 export const rootRouterConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent},
-    { path: 'sobre', component: SobreComponent },
+    { path: 'sobre', component: SobreComponent, canActivate: [AuthGuard] },
     { path: 'cadastro', component: CadastroComponent },
     { path: 'produtos', 
         loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
@@ -17,7 +17,7 @@ export const rootRouterConfig: Routes = [
     { path: 'admin', 
         loadChildren: () => import('./admin/admin.module')
         .then(m => m.AdminModule),
-        canLoad:[AuthGuard]
+        canLoad:[AuthGuard], canActivate: [AuthGuard]
     },
 
     //ATENÇÃO, Esse linha SEMPRE tem que ser a última, se não irá bugar o resto da navegação
