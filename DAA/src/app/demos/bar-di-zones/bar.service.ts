@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+export function BarFactory(http: HttpClient) {
+  return new BarServices(http);
+}
+
 @Injectable()
 export class BarServices {
 
-  // constructor(
-  //   private http: HttpClient
-  // ) { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   obterBebidas(): string {
     return 'Bebidasss';

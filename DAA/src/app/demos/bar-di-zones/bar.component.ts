@@ -1,12 +1,19 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Inject, OnInit } from '@angular/core';
 import { BarUnidadeConfig, BAR_UNIDADE_CONFIG } from './bar.config';
-import { BarServices, BarServicesMock } from './bar.service';
+import { BarFactory, BarServices, BarServicesMock } from './bar.service';
 
 @Component({
   selector: 'app-bar',
   templateUrl: './bar.component.html',
   providers: [
-    {provide: BarServices, useClass: BarServicesMock}  
+    // {provide: BarServices, useClass: BarServices},
+    {
+      provide: BarServices, useFactory: BarFactory,
+      deps: [
+        HttpClient
+      ]
+    },
   ]
 })
 

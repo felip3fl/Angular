@@ -17,6 +17,7 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AuthGuard } from './services/app.guard';
 import { CadastroGuard } from './services/cadastro.guard';
 import { FilmesComponent } from './demos/pipes/filmes/filmes.component';
+import { HttpClientModule } from '@angular/common/http';
 import { FileSizePipe } from './demos/pipes/filmes/filesize.pipe';
 import { ImageFormaterPipe } from './demos/pipes/filmes/image.pipe';
 import { BarModule } from './demos/bar-di-zones/bar.module';
@@ -44,6 +45,7 @@ export const BAR_PROVIDERS: Provider[] = [
     CustomFormsModule,
     TextMask.TextMaskModule,
     NavegacaoModule,
+    HttpClientModule,
     AppRoutingModule,
     BarModule.forRoot({
       unidadeId: 1000,
@@ -51,7 +53,7 @@ export const BAR_PROVIDERS: Provider[] = [
     })
   ],
   providers: [
-    BAR_PROVIDERS,
+    // BAR_PROVIDERS,
     AuthGuard,
     CadastroGuard,
     {provide: APP_BASE_HREF, useValue: '/'}
