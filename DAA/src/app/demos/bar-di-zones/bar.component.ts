@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Inject, Injector, OnInit } from '@angular/core';
 import { BarUnidadeConfig, BAR_UNIDADE_CONFIG } from './bar.config';
-import { BarFactory, BarServices, BarServicesMock } from './bar.service';
+import { BarFactory, BarServices, BarServicesMock, BebidaService } from './bar.service';
 
 @Component({
   selector: 'app-bar',
@@ -14,12 +14,14 @@ import { BarFactory, BarServices, BarServicesMock } from './bar.service';
         HttpClient, Injector
       ]
     },
+    { provide: BebidaService, useExisting: BarServices }
   ]
 })
 
 export class BarComponent implements OnInit {
 
   barBebida1: string;
+  barBebida2: string;  
   ConfigManual: BarUnidadeConfig;
   Config: BarUnidadeConfig;
   dadosUnidade: string;
@@ -28,11 +30,14 @@ export class BarComponent implements OnInit {
   constructor(
       private barServices: BarServices,
       @Inject('ConfigManualUnidade') private ApiConfigManual: BarUnidadeConfig,
-      @Inject(BAR_UNIDADE_CONFIG) private ApiConfig: BarUnidadeConfig
+      @Inject(BAR_UNIDADE_CONFIG) private ApiConfig: BarUnidadeConfig,
+
+      private bebidaService : BebidaService,
   ){}
 
   ngOnInit():void {
     this.barBebida1 = this.barServices.obterBebidas();
+    this.barBebida2 = this.bebidaService.obterBebidas();
     this.ConfigManual = this.ApiConfigManual;
     this.Config = this.ApiConfig;
 
