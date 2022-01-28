@@ -45,7 +45,10 @@ export const BAR_PROVIDERS: Provider[] = [
     TextMask.TextMaskModule,
     NavegacaoModule,
     AppRoutingModule,
-    BarModule
+    BarModule.forRoot({
+      unidadeId: 1000,
+      unidadeToken: 'eca938c99a0e9ff91029dc'
+    })
   ],
   providers: [
     BAR_PROVIDERS,
