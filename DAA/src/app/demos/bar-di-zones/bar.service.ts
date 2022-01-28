@@ -4,10 +4,9 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class BarServices {
 
-  constructor(
-    private http: HttpClient,
-  ) { }
-
+  // constructor(
+  //   private http: HttpClient
+  // ) { }
 
   obterBebidas(): string {
     return 'Bebidasss';
@@ -19,5 +18,20 @@ export class BarServices {
 
   obterRefeicoes(): string {
     return 'Refeições';
+  }
+}
+
+export class BarServicesMock {
+
+  obterBebidas(): string {
+    return 'MOCK';
+  }
+
+  obterPorcoes(): string {
+    return 'MOCK';
+  }
+
+  obterRefeicoes(): string {
+    return 'MOCK';
   }
 }

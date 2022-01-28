@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Provider } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
@@ -20,8 +20,12 @@ import { FilmesComponent } from './demos/pipes/filmes/filmes.component';
 import { FileSizePipe } from './demos/pipes/filmes/filesize.pipe';
 import { ImageFormaterPipe } from './demos/pipes/filmes/image.pipe';
 import { BarModule } from './demos/bar-di-zones/bar.module';
+import { BarServices } from './demos/bar-di-zones/bar.service';
 
-
+//Esse modo de colocar a depedencia é mais organizada
+export const BAR_PROVIDERS: Provider[] = [
+  BarServices
+];
 
 @NgModule({
   declarations: [
@@ -44,6 +48,7 @@ import { BarModule } from './demos/bar-di-zones/bar.module';
     BarModule
   ],
   providers: [
+    BAR_PROVIDERS,
     AuthGuard,
     CadastroGuard,
     {provide: APP_BASE_HREF, useValue: '/'}
