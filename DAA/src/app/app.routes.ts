@@ -8,6 +8,7 @@ import { AuthGuard } from './services/app.guard';
 import { CadastroGuard } from './services/cadastro.guard';
 import { FilmesComponent } from './demos/pipes/filmes/filmes.component';
 import { BarComponent } from './demos/bar-di-zones/bar.component';
+import { TodoComponent } from './demos/todo-list/todo.component';
 
 export const rootRouterConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -15,6 +16,7 @@ export const rootRouterConfig: Routes = [
     { path: 'sobre', component: SobreComponent, canActivate: [AuthGuard] },
     { path: 'filmes', component: FilmesComponent },
     { path: 'bar', component: BarComponent },
+    { path: 'todo', component: TodoComponent },
     { path: 'cadastro', component: CadastroComponent, canDeactivate: [CadastroGuard] },
     { path: 'produtos', 
         loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
