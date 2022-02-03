@@ -50,6 +50,12 @@ export class MenuComponent {
       admin: false
     },
     {
+      link: '/contador',
+      name: 'Contador',
+      exact: false,
+      admin: false
+    },
+    {
       link: '/admin',
       name:'Admin',
       exact: false,

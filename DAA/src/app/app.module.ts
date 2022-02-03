@@ -23,6 +23,7 @@ import { ImageFormaterPipe } from './demos/pipes/filmes/image.pipe';
 import { BarModule } from './demos/bar-di-zones/bar.module';
 import { BarServices } from './demos/bar-di-zones/bar.service';
 import { TodoModule } from './demos/todo-list/todo.module';
+import { ContadorComponent } from './demos/contador/contator.component';
 
 //Esse modo de colocar a depedencia é mais organizada
 export const BAR_PROVIDERS: Provider[] = [
@@ -36,7 +37,8 @@ export const BAR_PROVIDERS: Provider[] = [
     CadastroComponent,
     FilmesComponent,
     FileSizePipe,
-    ImageFormaterPipe
+    ImageFormaterPipe,
+    ContadorComponent
   ],
   imports: [
     BrowserModule,
