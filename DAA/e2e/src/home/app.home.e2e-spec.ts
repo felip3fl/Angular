@@ -1,11 +1,11 @@
 import { browser, logging } from 'protractor';
-import { AppPage } from './app.po';
+import { AppHomePage } from './app.home.po';
 
 describe('Testes da página inicial', () => {
-  let page: AppPage;
+  let page: AppHomePage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new AppHomePage();
   });
 
   it('deve exibir uma mensagem na pagina inicial', () => {
