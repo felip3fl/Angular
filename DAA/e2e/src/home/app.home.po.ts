@@ -1,12 +1,11 @@
-import { browser, by, element, promise } from 'protractor';
+import { browser, by, element } from 'protractor';
+import { AppBasePage } from '../app.base.po';
 
-export class AppHomePage  {
+export class AppHomePage extends AppBasePage {
 
-  navigateTo(){
-      return browser.get(browser.baseUrl) as Promise<any>;
-  }
+constructor(){ super(); }
 
   getTitleText() {
-    return element(by.xpath('/html/body/app-root/app-home/header/div/div/div[2]/h1')).getText() as Promise<string>;
+    return this.obterElementoXpath('/html/body/app-root/app-home/header/div/div/div[2]/h1').getText()
   }
 }

@@ -29,7 +29,7 @@
         <div class="form-group">
             <label class="col-md-2 control-label">CPF</label>
             <div class="col-md-10">
-                <input class="form-control" id="email" type="text" placeholder="CPF (requerido)" formControlName="cpf12"
+                <input class="form-control" id="cpf" type="text" placeholder="CPF (requerido)" formControlName="cpf12"
                     cpf [textMask]="{mask: MASKS.cpf.textMask}" [ngClass]="{'is-invalid':displayMessage.cpf12}"/>
 
                 <span class="text-danger" *ngIf="displayMessage.cpf12">
@@ -76,7 +76,7 @@
         <div class="form-group">
             <label class="col-md-2 control-label">Senha</label>
             <div class="col-md-10">
-                <input class="form-control" id="password" type="password" placeholder="Senha (requerido)"
+                <input class="form-control" id="senha" type="password" placeholder="Senha (requerido)"
                     formControlName="senha12" [ngClass]="{'is-invalid':displayMessage.senha12}"/>
 
                 <span class="text-danger" *ngIf="displayMessage.senha12">
@@ -94,7 +94,7 @@
         <div class="form-group">
             <label class="col-md-2 control-label">Confirme a Senha</label>
             <div class="col-md-10">
-                <input class="form-control" id="confirmPassword" type="password"
+                <input class="form-control" id="senhaConfirmacao" type="password"
                     placeholder="Confirme a Senha (requerido)" formControlName="senhaConfirmacao12" 
                     [ngClass]="{'is-invalid':displayMessage.senhaConfirmacao12}"/>
 

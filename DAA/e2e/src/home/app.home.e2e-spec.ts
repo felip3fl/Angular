@@ -1,5 +1,5 @@
-import { browser, logging } from 'protractor';
 import { AppHomePage } from './app.home.po';
+import { browser, logging } from 'protractor';
 
 describe('Testes da página inicial', () => {
   let page: AppHomePage;
@@ -9,7 +9,7 @@ describe('Testes da página inicial', () => {
   });
 
   it('deve exibir uma mensagem na pagina inicial', () => {
-    page.navigateTo();
+    page.navegarParaHome();
     expect(page.getTitleText()).toEqual('Desenvolvimento Avançado em Angular');
   });
 
