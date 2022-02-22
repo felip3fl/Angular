@@ -13,7 +13,7 @@ import { ContaService } from '../services/conta.service';
 export class CadastroComponent implements OnInit, AfterViewInit {
 
   @ViewChildren(FormControlName, { read: ElementRef }) formInputElements: ElementRef[];
-  
+
   errors: any[] = [];
   cadastroForm: FormGroup;
   usuario: Usuario;
@@ -70,8 +70,20 @@ export class CadastroComponent implements OnInit, AfterViewInit {
     if (this.cadastroForm.dirty && this.cadastroForm.valid) {
       this.usuario = Object.assign({}, this.usuario, this.cadastroForm.value);
 
-      this.contaService.registrarUsuario(this.usuario);
+      this.contaService.registrarUsuario(this.usuario)
+        .subscribe(
+          sucesso => { this.processarSucesso(sucesso) },
+          falha => { this.processarFalha(falha) }
+        );
     }
+  }
+
+  processarSucesso(response: any) {
+
+  }
+
+  processarFalha(fail: any) {
+
   }
 
 }
