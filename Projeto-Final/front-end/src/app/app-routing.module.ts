@@ -5,6 +5,13 @@ import { HomeComponent } from './navegacao/home/home.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  {
+    path: 'conta',
+    loadChildren: () => import('./conta/conta.module')
+      .then(m => m.ContaModule)
+  },
+  { path: 'nao-encontrado', component: NotFoundComponent },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
