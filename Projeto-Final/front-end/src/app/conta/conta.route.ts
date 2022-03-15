@@ -9,7 +9,7 @@ const contaRouterConfig: Routes = [
     {
         path: '', component: ContaAppComponent,
         children: [
-            { path: 'cadastro', component: CadastroComponent, canDeactivate: [ContaGuard], canActivate: [ContaGuard] },
+            { path: 'cadastro', component: CadastroComponent, canActivate: [ContaGuard], canDeactivate: [ContaGuard] },
             { path: 'login', component: LoginComponent, canActivate: [ContaGuard] }
         ]
     }

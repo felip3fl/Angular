@@ -1,11 +1,13 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { catchError, map, Observable } from "rxjs";
-import { BaseService } from "src/app/services/base.service";
-import { Usuario } from "../models/usuario";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Usuario } from '../models/usuario';
+
+import { Observable } from 'rxjs';
+import { catchError, map } from "rxjs/operators";
+import { BaseService } from 'src/app/services/base.service';
 
 @Injectable()
-export class ContaService extends BaseService  {
+export class ContaService extends BaseService {
 
     constructor(private http: HttpClient) { super(); }
 
@@ -19,16 +21,13 @@ export class ContaService extends BaseService  {
         return response;
     }
 
-    //Novo
-        login(usuario: Usuario): Observable<Usuario> {
-            let response = this.http
-                .post(this.UrlServiceV1 + 'entrar', usuario, this.ObterHeaderJson())
-                .pipe(
-                    map(this.extractData),
-                    catchError(this.serviceError));
+    login(usuario: Usuario): Observable<Usuario> {
+        let response = this.http
+            .post(this.UrlServiceV1 + 'entrar', usuario, this.ObterHeaderJson())
+            .pipe(
+                map(this.extractData),
+                catchError(this.serviceError));
 
-            return response;
-        }
-    //Novo
-
+        return response;
+    }
 }
