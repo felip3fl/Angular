@@ -9,6 +9,8 @@ import { ToastrService } from 'ngx-toastr';
 import { ValidationMessages, GenericValidator, DisplayMessage } from 'src/app/utils/generic-form-validation';
 import { Fornecedor } from '../models/fornecedor';
 import { FornecedorService } from '../services/fornecedor.service';
+import { CepConsulta } from '../models/endereco';
+import { StringUtils } from 'src/app/utils/string-utils';
 
 @Component({
   selector: 'app-novo',
@@ -72,6 +74,30 @@ export class NovoComponent implements OnInit {
       documento: ['', [Validators.required]],
       ativo: ['', [Validators.required]],
       tipoFornecedor: ['', [Validators.required]]     
+    });
+  }
+
+  buscarCep(cep: string) {
+
+    cep = StringUtils.somenteNumeros(cep);
+    if (cep.length < 8) return;
+
+    this.fornecedorService.consultarCep(cep)
+      .subscribe(
+        cepRetorno => this.preencherEnderecoConsulta(cepRetorno),
+        erro => this.errors.push(erro));
+  }
+
+  preencherEnderecoConsulta(cepConsulta: CepConsulta) {
+
+    this.fornecedorForm.patchValue({
+      endereco: {
+        logradouro: cepConsulta.logradouro,
+        bairro: cepConsulta.bairro,
+        cep: cepConsulta.cep,
+        cidade: cepConsulta.localidade,
+        estado: cepConsulta.uf
+      }
     });
   }
 
