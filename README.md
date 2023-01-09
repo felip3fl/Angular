@@ -11,6 +11,7 @@
 
 ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-green)
 
+<BR>
 
 ## :hammer: Funcionalidades do projeto
 
@@ -18,23 +19,33 @@
 - `Funcionalidade 2`: descrição da funcionalidade 2
 - `Funcionalidade 3`: descrição da funcionalidade 3
 
+<BR>
+
 ## 📁 Acesso ao projeto
 
 **Todo código fonte se encontra na pasta meat-app-starter-master**
 
+<BR>
+
 ## 🛠️ Abrir e rodar o projeto
 
 **Use o Visual Studio Code para usar este projeto**
+
+<BR>
 
 ## ✔️ Técnicas e tecnologias utilizadas
 
 - ``Angular``
 - ``Paradigma de orientação a objetos``
 
+<BR>
+
 ## Autor
 
-| [<img src="https://github.com/felip3fl/FL_IMAGE_REPOSITORY/blob/main/Nick/XboxAvatar3.png?raw=true" width=115><br><sub>Felipe Lima</sub>](https://github.com/felip3fl) | 
+| [<img src="https://user-images.githubusercontent.com/20684484/147861648-a25d79ff-4fd3-4985-874a-ed7c3984beba.png?raw=true" width=115><br><sub>Felipe Lima</sub>](https://github.com/felip3fl) | 
 | :---: 
+  
+<BR>
   
 ## Licença
 
