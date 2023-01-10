@@ -9,7 +9,10 @@
 <p align="justify">
  Projeto em desenvolvimento para estudo a tecnologia do framework Angular. Seguindo todos os ensinamento do curso Desenvolvedor.io e outras fontes de conhecimento.
 
-![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-green)
+<p align="center">
+<img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-green">
+<img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-blue">
+</p>
 
 <BR>
 
@@ -34,6 +37,13 @@ Use o ``Visual Studio Code`` para usar este projeto
 <BR>
 
 ## ✔️ Técnicas e tecnologias utilizadas
+
+<p align="justify">
+<img width="90" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg">
+&nbsp;&nbsp;<img width="90" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+&nbsp;&nbsp;<img width="90"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg">
+&nbsp;&nbsp;<img width="90" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">
+</p>
 
 - ``Angular``
 - ``Paradigma de orientação a objetos``
