@@ -1,10 +1,10 @@
-<h1 align="center"> FL ANGULAR <img src="https://user-images.githubusercontent.com/20684484/146604723-aaebda4e-f52e-4afd-b423-0b7ef7d63030.png" width="40" align="center" > </h1>
+<h1 align="center"><img src="https://user-images.githubusercontent.com/20684484/146604723-aaebda4e-f52e-4afd-b423-0b7ef7d63030.png" width="170" align="center"><BR><BR>FL ANGULAR<BR><BR></h1>
 
 <h4 align="center"> 
     :construction:  Projeto usado para estudo, forever em construção  :construction:
 </h4>
 
-## Descrição do projeto
+## 📃 Descrição do projeto
 
 <p align="justify">
  Projeto em desenvolvimento para estudo a tecnologia do framework Angular. Seguindo todos os ensinamento do curso Desenvolvedor.io e outras fontes de conhecimento.
@@ -15,21 +15,21 @@
 
 ## :hammer: Funcionalidades do projeto
 
-- `Funcionalidade 1`: descrição da funcionalidade 1
-- `Funcionalidade 2`: descrição da funcionalidade 2
-- `Funcionalidade 3`: descrição da funcionalidade 3
+- `Funcionalidade 1`: ???
+- `Funcionalidade 2`: ???
+- `Funcionalidade 3`: ???
 
 <BR>
 
 ## 📁 Acesso ao projeto
 
-**Todo código fonte se encontra na pasta meat-app-starter-master**
+Todo código fonte se encontra na pasta meat-app-starter-master
 
 <BR>
 
 ## 🛠️ Abrir e rodar o projeto
 
-**Use o Visual Studio Code para usar este projeto**
+Use o ``Visual Studio Code`` para usar este projeto
 
 <BR>
 
