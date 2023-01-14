@@ -52,7 +52,7 @@ Use o ``Visual Studio Code`` para usar este projeto
 
 ## Autor
 
-| [<img src="https://user-images.githubusercontent.com/20684484/147861648-a25d79ff-4fd3-4985-874a-ed7c3984beba.png?raw=true" width=115><br><sub>Felipe Lima</sub>](https://github.com/felip3fl) | 
+| [<img src="https://github.com/felip3fl/felip3fl/blob/main/Material/Nick/nick1.jpg?raw=true" width=115><br><sub>Felipe Lima</sub>](https://github.com/felip3fl) | 
 | :---: 
   
 <BR>
