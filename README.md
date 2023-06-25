@@ -20,8 +20,8 @@
 
 ## :hammer: Projetos
 
-- `Funcionalidade 1`: 06 - Projeto Final
-- `Funcionalidade 2`: 05 - DAA
+- `Angular 13`: 06 - Projeto Final
+- `Angular 13`: 05 - DAA
 
 <BR>
 
