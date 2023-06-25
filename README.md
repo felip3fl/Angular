@@ -18,11 +18,10 @@
 
 <BR>
 
-## :hammer: Funcionalidades do projeto
+## :hammer: Projetos
 
-- `Funcionalidade 1`: ???
-- `Funcionalidade 2`: ???
-- `Funcionalidade 3`: ???
+- `Funcionalidade 1`: 06 - Projeto Final
+- `Funcionalidade 2`: 05 - DAA
 
 <BR>
 
