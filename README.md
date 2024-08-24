@@ -1,5 +1,5 @@
 <p align="center"><img src="https://raw.githubusercontent.com/felip3fl/FL_ANGULAR/c646cd02931608f9ed5dfcdd4bd6f9c0aa0ed09a/Material/Icon/angular-icon-seeklogo.svg" width="170" align="center"></p>
-<h3 align="center">FL ANGULAR</h3>
+<h3 align="center">ANGULAR</h3>
 <p align="center">
 <img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-f529a0">
 <img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-8a12f1">
