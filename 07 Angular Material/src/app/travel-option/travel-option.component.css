@@ -28,8 +28,9 @@ mat-form-field{
 
 .container{
     background-image: url("../../assets/banner.jpg");
-    background-size: 100%;
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     background-color: brown;
     height: 500px;
     display: grid;
