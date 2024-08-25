@@ -5,16 +5,24 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { map, Observable, startWith } from 'rxjs';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {ChangeDetectionStrategy} from '@angular/core';
+import {provideNativeDateAdapter} from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-travel-option',
   standalone: true,
+  providers: [provideNativeDateAdapter()],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     MatFormFieldModule,
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
     AsyncPipe,
+    MatDatepickerModule,
+    MatButtonModule
   ],
   templateUrl: './travel-option.component.html',
   styleUrl: './travel-option.component.css'

@@ -1,28 +1,38 @@
 <div class="container">
-    <div class="box">
-        <div class="putYourTripInformation">
-            <br>Conte-nos sobre sua viagem
-            
-            <form class="example-form">
-                <mat-form-field class="example-full-width">
-                  <mat-label>Qual é seu destino</mat-label>
-                  <input type="text"
-                         placeholder="Escolha um destino"
-                         aria-label="Number"
-                         matInput
-                         [formControl]="myControl"
-                         [matAutocomplete]="auto">
-                  <mat-autocomplete #auto="matAutocomplete">
-                    @for (option of filteredOptions | async; track option) {
-                      <mat-option [value]="option">{{option}}</mat-option>
-                    }
-                  </mat-autocomplete>
-                </mat-form-field>
-              </form>
+  <div class="box">
+    <div class="putYourTripInformation">
+      <div class="tituloBox">Conte-nos sobre sua viagem</div>
 
-            <br>Partida
-            <br>Chegada
-            <br>Faça uma cotação
-        </div>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Qual é seu destino</mat-label>
+          <input type="text" placeholder="Escolha um destino" aria-label="Number" matInput [formControl]="myControl"
+            [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            @for (option of filteredOptions | async; track option) {
+            <mat-option [value]="option">{{option}}</mat-option>
+            }
+          </mat-autocomplete>
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Informe sua partica e chegada</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate placeholder="Start date">
+            <input matEndDate placeholder="End date">
+          </mat-date-range-input>
+          
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+
+        </mat-form-field>
+
+        <button class="testebutton">
+          Faça uma cotação
+        </button>
+
+      </form>
     </div>
+  </div>
 </div>
