@@ -1,0 +1,38 @@
+
+
+mat-form-field{
+    width: 100%;
+}
+
+.container{
+    background-image: url("../../assets/banner.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: brown;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box{
+    grid-column: 3 / 3;
+    align-self: center;
+    padding: 50px;
+    
+}
+
+.putYourTripInformation{
+    padding: 30px;
+    border-bottom: 2px solid #ed008e;
+    border-top: 1px solid rgb(220, 220, 220);
+    border-left: 1px solid rgb(220, 220, 220);
+    border-right: 1px solid rgb(220, 220, 220);
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.200) 0px 8px 24px;
+    width: 300px;
+    
+}
